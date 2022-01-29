@@ -3,8 +3,11 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
+//Fixing the relative path issue. now should run the js as well
+app.use(express.static(__dirname + '/Client'));
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Client/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, ()=>{
