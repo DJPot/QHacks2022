@@ -27,7 +27,7 @@ conn.onmessage = function (msg) {
          break; 
       //when a remote peer sends an ice candidate to us 
       case "candidate": 
-         handleCandidate(data.candidate); 
+         handleCandidate(data.candidate);
          break; 
       case "leave": 
          handleLeave(); 
